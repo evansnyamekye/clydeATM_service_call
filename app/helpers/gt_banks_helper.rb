@@ -1,0 +1,2 @@
+module GtBanksHelper
+end

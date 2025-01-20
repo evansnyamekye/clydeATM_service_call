@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :gt_banks
   resources :banks
   root 'home#index'
   get 'home/bank'

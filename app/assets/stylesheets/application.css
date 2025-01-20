@@ -9,51 +9,51 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
- .gt-bank-card,
- .cbg-bank-card {
-   transition: background-color 0.4s ease, color 0.4s ease;
-   cursor: pointer;
- }
- .gt-bank-card:hover {
-   background-color: #ff6600; /* GT Bank orange color */
-   color: white;
- }
- 
- .cbg-bank-card:hover {
-   background-color: #ff0000; /* CBG Bank red color */
-   color: white;
- }
- 
- .gt-bank-card:hover .card-title,
- .cbg-bank-card:hover .card-title {
-   color: rgb(248, 248, 248);
- }
- 
- /* Media queries for all mobile devices */
- @media (max-width: 767px) {
-     .gt-bank-card,
-     .cbg-bank-card {
-         cursor: pointer;
-         transition: background-color 0.4s ease, color 0.4s ease;
-         margin-bottom: 1.5rem; /* Add space between the cards */
-     }
- 
-     .gt-bank-card:hover {
-         background-color: #ff6600; /* GT Bank orange color */
-         color: white;
-         cursor: pointer;
-     }
-   
-     .cbg-bank-card:hover {
-         background-color: #ff0000; /* CBG Bank red color */
-         color: white;
-         cursor: pointer;
-     }
-   
-     .gt-bank-card:hover .card-title,
-     .cbg-bank-card:hover .card-title {
-         color: rgb(78, 77, 77);
-         cursor: pointer;
-     }
- }
- 
+.gt-bank-card,
+.cbg-bank-card {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.gt-bank-card:hover {
+  background-color: #f60; /* GT Bank orange color */
+  color: white;
+}
+
+.cbg-bank-card:hover {
+  background-color: #f00; /* CBG Bank red color */
+  color: white;
+}
+
+.gt-bank-card:hover .card-title,
+.cbg-bank-card:hover .card-title {
+  color: rgb(248, 248, 248);
+}
+
+/* Media queries for all mobile devices */
+@media (max-width: 767px) {
+  .gt-bank-card,
+  .cbg-bank-card {
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    margin-bottom: 1.5rem; /* Add space between the cards */
+  }
+
+  .gt-bank-card:hover {
+    background-color: #f60; /* GT Bank orange color */
+    color: white;
+    cursor: pointer;
+  }
+
+  .cbg-bank-card:hover {
+    background-color: #f00; /* CBG Bank red color */
+    color: white;
+    cursor: pointer;
+  }
+
+  .gt-bank-card:hover .card-title,
+  .cbg-bank-card:hover .card-title {
+    color: rgb(78, 77, 77);
+    cursor: pointer;
+  }
+}
