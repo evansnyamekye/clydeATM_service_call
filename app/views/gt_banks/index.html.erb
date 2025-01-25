@@ -1,0 +1,38 @@
+
+<div class="container">
+  <table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>Bank Name</th>
+        <th>Branch Name</th>
+        <th>Custodian Name</th>
+        <th>Contact</th>
+        <th>ATM Model</th>
+        <th>Installation Date</th>
+        <th>Location</th>
+        <th>ATM S/N</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @gt_banks.each do |gt_bank| %>
+        <tr>
+          <td data-label="Bank Name"><%= gt_bank.bank_name %></td>
+          <td data-label="Branch Name"><%= gt_bank.branch_name %></td>
+          <td data-label="Custodian Name"><%= gt_bank.custodian_name %></td>
+          <td data-label="Contact"><%= gt_bank.contact %></td>
+          <td data-label="ATM Model"><%= gt_bank.atm_model %></td>
+          <td data-label="Installation Date"><%= gt_bank.installation_date %></td>
+          <td data-label="Location"><%= gt_bank.location %></td>
+          <td data-label="ATM S/N"><%= gt_bank.atm_serial_number %></td>
+          <td data-label="Actions">
+            <%= link_to 'Show', gt_bank, class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_gt_bank_path(gt_bank), class: 'btn btn-warning' %>
+            <%= link_to 'Delete', gt_bank, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Add New Branch", new_gt_bank_path, class: "btn btn-secondary" %>
+</div>

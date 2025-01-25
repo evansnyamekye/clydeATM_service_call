@@ -1,0 +1,49 @@
+<%= form_with(model: @gt_bank, local: true) do |form| %>
+  <% if @gt_bank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gt_bank.errors.count, "error") %> prohibited, Please fill in bank details to save forms </h2>
+
+      <ul>
+      <% @gt_bank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="table form-group">
+    <%= form.text_field :bank_name, class: "form-control" , placeholder: "Bank Name"%>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :branch_name, class: "form-control", placeholder: "Branch Name"%>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :custodian_name, class: "form-control", placeholder: "Custodian Name" %>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :contact, class: "form-control", placeholder: "Contact" %>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :atm_model, class: "form-control", placeholder: "ATM Model" %>
+  </div>
+
+  <div class="table form-group">
+  <%= form.date_field :installation_date, class: "form-control", placeholder: "Installation Date" %>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :location, class: "form-control", placeholder: "Location" %>
+  </div>
+
+  <div class="table form-group">
+    <%= form.text_field :atm_serial_number, class: "form-control", placeholder: "ATM Serial Number" %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'btn btn-secondary' %>
+  </div>
+<% end %>
