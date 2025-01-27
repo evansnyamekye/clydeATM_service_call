@@ -4,7 +4,7 @@ class GtBanksController < ApplicationController
   # GET /gt_banks or /gt_banks.json
   def index
     @gt_banks = GtBank.all
-    cookies[:per_page] || 10
+    per_page = cookies[:per_page] || 10
     @gt_banks = GtBank.page(params[:page]).per(5)
     puts @gt_banks.inspect
   end
