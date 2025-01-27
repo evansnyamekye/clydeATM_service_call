@@ -1,0 +1,21 @@
+<div id="<%= dom_id gt_bank %>">
+  
+<div class="jumbotron">
+  <h1 class="display-4">
+  <%= gt_bank.bank_name %>
+  <%= gt_bank.branch_name %>
+  </h1>
+  <p class="lead"><%= gt_bank.custodian_name %></p>
+  <p class="lead">
+    Contact: <%= gt_bank.contact %> | 
+    ATM Model: <%= gt_bank.atm_model %> | 
+    Installation Date: <%= gt_bank.installation_date %> | 
+    Location: <%= gt_bank.location %> | 
+    ATM Serial Number: <%= gt_bank.atm_serial_number %>
+  </p>
+  <p class="lead">
+  <%= link_to "Edit", edit_gt_bank_path(@gt_bank), class:"btn btn-secondary" %> 
+  <%= link_to "Back",  gt_banks_path, class:"btn btn-dark" %>
+  <%= button_to "Delete Branch", @gt_bank, method: :delete, class: "border rounded-2 border-0 m-2 fw-light btn btn-info"%>
+  </p>
+</div>

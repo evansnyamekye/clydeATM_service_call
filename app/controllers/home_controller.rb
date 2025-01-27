@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
   def index; end
 
-  def about
-    hli
-  end
+  def about; end
 end

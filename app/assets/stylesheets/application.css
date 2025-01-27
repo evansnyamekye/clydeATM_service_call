@@ -30,30 +30,52 @@
   color: rgb(248, 248, 248);
 }
 
-/* Media queries for all mobile devices */
-@media (max-width: 767px) {
-  .gt-bank-card,
-  .cbg-bank-card {
-    cursor: pointer;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    margin-bottom: 1.5rem; /* Add space between the cards */
+/* Base styles for larger screens */
+.container {
+  overflow-x: auto; /* Ensure horizontal scroll if content overflows */
+  padding: 15px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Mobile-first responsiveness */
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    width: 100%;
   }
 
-  .gt-bank-card:hover {
-    background-color: #f60; /* GT Bank orange color */
-    color: white;
-    cursor: pointer;
+  .table thead {
+    display: none; /* Hide the table header for small screens */
   }
 
-  .cbg-bank-card:hover {
-    background-color: #f00; /* CBG Bank red color */
-    color: white;
-    cursor: pointer;
+  .table tr {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
   }
 
-  .gt-bank-card:hover .card-title,
-  .cbg-bank-card:hover .card-title {
-    color: rgb(78, 77, 77);
-    cursor: pointer;
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none;
+  }
+
+  .table td::before {
+    content: attr(data-label); /* Add labels for each cell */
+    font-weight: bold;
+    flex: 1;
+    text-transform: uppercase;
   }
 }
