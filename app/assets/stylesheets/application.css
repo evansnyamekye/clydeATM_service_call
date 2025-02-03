@@ -50,9 +50,18 @@
 
 /* Mobile-first responsiveness */
 @media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px; /* Add space between cards */
+  }
+
   .table {
     display: block;
     width: 100%;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
   }
 
   .table thead {
@@ -61,6 +70,7 @@
 
   .table tr {
     display: block;
+    width: 130%;
     margin-bottom: 15px;
     border-bottom: 1px solid #ddd;
   }
@@ -77,5 +87,42 @@
     font-weight: bold;
     flex: 1;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 468px) {
+  .table tr {
+    display: block;
+    width: 112%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .table {
+    width: 100%;
+  }
+
+  .table thead {
+    display: table-header-group; /* Show the table header for tablets */
+  }
+
+  .table tr {
+    display: table-row;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .table td {
+    display: table-cell;
+    justify-content: normal;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .table td::before {
+    content: none; /* Remove labels for each cell */
   }
 }
